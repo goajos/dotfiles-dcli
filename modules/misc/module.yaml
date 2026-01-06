@@ -1,7 +1,10 @@
 description: misc
-dotfiles_sync: true
 dotfiles:
-  - source: settings.json
+  - source: discord_settings.json
     target: ~/.config/discord/settings.json
+  - source: code_settings.json
+    target: ~/.config/Code/User/settings.json
+  - source: keybindings.json
+    target: ~/.config/Code/User/keybindings.json
 services:
 

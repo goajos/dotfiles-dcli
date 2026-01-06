@@ -1,5 +1,6 @@
+# TODO: fix bluetooth service
 description: bluetooth
 dotfiles_sync: true
 services:
-  - bluetooth.service
-  - bt-auto-connects.service
+  - bluetooth
+  - bt-auto-connect.service
