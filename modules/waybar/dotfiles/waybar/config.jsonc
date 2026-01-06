@@ -133,13 +133,13 @@
         "tooltip-format": "Hardware stats"
     },
     "custom/cpu": {
-        "exec": "uv run /home/jappe/.config/waybar/scripts/cpu_monitor.py",
+        "exec": "uv run /home/jappe/.local/bin/cpu_monitor.py",
         "return-type": "json",
         "format": "{}", // required for the custom output
         "tooltip": true
     },
     "custom/igpu": {
-        "exec": "uv run /home/jappe/.config/waybar/scripts/igpu_monitor.py",
+        "exec": "uv run /home/jappe/.local/bin/igpu_monitor.py",
         "return-type": "json",
         "format": "{}", // required for the custom output
         "tooltip": true

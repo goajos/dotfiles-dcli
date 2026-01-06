@@ -6,6 +6,7 @@ description: Arch Desktop
 # import:
 #   - hosts/shared/laptop-common.yaml
 
+# TODO: replace the decman setup within niri with dcli!
 # TODO: timeshift/snapper setup?
 # TODO: git module with agent + token setup?
 # Enabled modules
@@ -23,6 +24,7 @@ enabled_modules:
   - devel/unity
   - devel/zig
   - fonts
+  - fuzzel
   - mako
   - misc
   - niri

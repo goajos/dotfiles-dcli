@@ -1,0 +1,4 @@
+description: fuzzel
+packages:
+  - fuzzel # Application launcher for wlroots based Wayland compositors
+
