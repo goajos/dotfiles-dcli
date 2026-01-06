@@ -1,0 +1,7 @@
+[Unit]
+Description=waybar
+BindsTo=niri.service
+After=niri.service
+
+[Service]
+ExecStart=/usr/bin/waybar

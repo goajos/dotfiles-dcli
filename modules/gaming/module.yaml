@@ -1,0 +1,8 @@
+# TODO: setup gaming module?
+description: gaming
+dotfiles_sync: false
+dotfiles:
+  - source: 
+    target:
+services:
+

@@ -1,0 +1,7 @@
+[Unit]
+Description=Dynamic Window Rules
+BindsTo=niri.service
+After=niri.service
+
+[Service]
+ExecStart=/home/jappe/.local/bin/dynamic_window_rules.py

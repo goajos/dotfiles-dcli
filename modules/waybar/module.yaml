@@ -1,0 +1,8 @@
+description: waybar
+dotfiles_sync: true
+dotfiles:
+  - source: cpu_monitor.py
+    target: ~/.local/bin/cpu_monitor.py
+  - source: igpu_monitor.py
+    target: ~/.local/bin/igpu_monitor.py
+services:

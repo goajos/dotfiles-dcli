@@ -1,0 +1,6 @@
+description: python
+packages:
+  - python # The Python programming language 
+  - ty # An extremely fast Python type checker and language server, written in Rust.
+  - uv # An extremely fast Python package installer and resolver written in Rust
+

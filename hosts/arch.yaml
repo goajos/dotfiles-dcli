@@ -1,0 +1,61 @@
+host: arch
+description: Arch Desktop
+
+# Import shared configurations (optional)
+# Example:
+# import:
+#   - hosts/shared/laptop-common.yaml
+
+# TODO: git module with agent + token setup?
+# Enabled modules
+enabled_modules:
+  - alacritty
+  - base
+  - bluetooth
+  - devel/c
+  - devel/csharp
+  - devel/docker
+  - devel/python
+  - devel/raylib
+  - devel/rust
+  - devel/typescript
+  - devel/unity
+  - devel/zig
+  - fonts
+  - mako
+  - misc
+  - niri
+  - niri/idle
+  - nvim
+  - openrgb
+  - pacman
+  - shell
+  - sound
+  - systemd
+  - waybar
+  - waybar/perf
+
+# Host-specific packages
+packages: []
+
+# Exclude packages from base or modules
+exclude: []
+
+# Configuration backup settings
+config_backups:
+  enabled: false
+  max_backups: 5
+
+# System backup settings
+system_backups:
+  enabled: false
+  backup_on_sync: false
+  backup_on_update: false
+  tool: timeshift
+  snapper_config: root
+
+# Settings
+auto_prune: false
+
+aur_helper: paru
+# aur_helper: yay

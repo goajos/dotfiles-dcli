@@ -1,0 +1,68 @@
+// mklink "C:\Users\jcremers\AppData\Roaming\Code\User\settings.json" "\\wsl$\archlinux\home\jappe\Repositories\dotfiles\misc\code\wsl\settings.json"
+{
+    // windows transparency settings
+    "glassit.alpha": 225,
+    // editor settings
+    "editor.lineNumbers": "relative",
+    "editor.fontFamily": "JetBrains Mono Nerd Font",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.matchBrackets": "never",
+    "editor.autoClosingBrackets": "never",
+    "editor.tabCompletion": "on",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.occurrencesHighlight": "off",
+    "editor.overviewRulerBorder": false,
+    "editor.cursorBlinking": "solid",
+    "editor.rulers": [100],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "editor.wrapOnEscapedLineFeeds": true,
+    "editor.cursorSurroundingLines": 10,
+    "breadcrumbs.enabled": false,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "terminal.integrated.suggest.enabled": false,
+    // window settings
+    "window.menuBarVisibility": "hidden",
+    "window.titleBarStyle": "native",
+    "window.menuStyle": "custom",
+    "window.customTitleBarVisibility": "never",
+    // workbench settings
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.activityBar.location": "hidden",
+    "workbench.statusBar.visible": true,
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.indent": 16,
+    "workbench.view.showQuietly": {
+        "workbench.panel.output": true
+    },
+    // file explorer settings
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.decorations.colors": false,
+    "git.decorations.enabled": false,
+    // neovim settings
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    // ln -s /home/jappe/Repositories/dotfiles/nvim/nvim/init.lua /home/jappe/.config/nvim/init.lua
+    "vscode-neovim.neovimInitVimPaths.linux": "/home/jappe/.config/nvim/init.lua",
+    "vscode-neovim.useWSL": true,
+    "vscode-neovim.wslDistribution": "archlinux",
+    // files settings
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    // copilot settings
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.enable": {
+        "*": false
+    },
+    "git.suggestSmartCommit": false,
+    "python.defaultInterpreterPath": "c:\\Python314\\python.exe",
+    // "ruff.configuration": "${workspaceFolder}/pyproject.toml",
+}

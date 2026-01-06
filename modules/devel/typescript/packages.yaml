@@ -1,0 +1,4 @@
+description: typescript 
+packages:
+  - npm # JavaScript package manager
+  - typescript-language-server # Language Server Protocol (LSP) implementation for TypeScript using tsserver

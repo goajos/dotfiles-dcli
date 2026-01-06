@@ -1,0 +1,7 @@
+[Unit]
+Description=idle-inhibitor for niri
+BindsTo=niri.service
+After=niri.service
+
+[Service]
+ExecStart=/home/jappe/.local/bin/idle-inhibitor

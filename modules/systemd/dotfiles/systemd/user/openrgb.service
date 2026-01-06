@@ -1,0 +1,8 @@
+[Unit]
+Description=OpenRGB
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/openrgb --server --profile "1s-white-breathing"

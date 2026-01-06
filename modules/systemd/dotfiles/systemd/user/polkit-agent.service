@@ -1,0 +1,7 @@
+[Unit]
+Description=Polkit Agent
+BindsTo=niri.service
+After=niri.service
+
+[Service]
+ExecStart=/lib/polkit-kde-authentication-agent-1

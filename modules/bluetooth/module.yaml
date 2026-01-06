@@ -1,0 +1,5 @@
+description: bluetooth
+dotfiles_sync: true
+services:
+  - bluetooth.service
+  - bt-auto-connects.service

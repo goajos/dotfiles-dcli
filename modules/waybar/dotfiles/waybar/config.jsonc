@@ -1,0 +1,147 @@
+// -*- mode: jsonc -*-
+[{
+    "layer": "top",
+    "height": 25,
+    "modules-center": ["wireplumber","bluetooth", "clock", "network", "privacy", "privacy#audioin"],
+    "wireplumber": {
+        "format": "{icon}",
+        "format-muted": "󰖁",
+        "tooltip-format": "{node_name}\n{volume}%",
+        "format-icons": ["", "", ""],
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+    "bluetooth": {
+        "format": "󰂲",
+        "format-connected": "",
+        "format-connected-battery": "",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{num_connections} connected\t{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
+    "clock": {
+        "interval": 60,
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%Y-%m-%d}",
+        "timezone": "Europe/Brussels"
+    },
+     "network": {
+        "interval": 1,
+        "format-wifi": "{icon}",
+        "format-ethernet": "",
+        "format-disconnected": "󰪎",
+        "tooltip-format-wifi": "{essid}\n{ipaddr}/{cidr}\n {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}\n {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected 󰪎",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+    },
+    "privacy": {
+        "expand": true,
+        "icon-size": 18,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 12
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 12
+            }
+        ]
+    },
+    "privacy#audioin": {
+        "expand": true,
+        "icon-size": 12,
+        "modules": [
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 12
+            }
+        ]
+    }
+},{
+    "layer": "top",
+    "position": "bottom",
+    "height": 25,
+    "modules-center": ["group/power","wlr/taskbar", "group/hardware"],
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": false,
+            "children-class": "drawer-child",
+            "click-to-reveal": true
+        },
+        "modules": [
+            "custom/power-wrap",
+            "custom/lock",
+            "custom/hibernate",
+            "custom/reboot",
+            "custom/shutdown"
+        ]
+    },
+    "custom/power-wrap": {
+        "format": "",
+        "tooltip-format": "Power options"
+    },
+    "custom/lock": {
+        "format": "",
+        "tooltip-format": "Lock session",
+        "on-click": "gtklock"
+    },
+    "custom/hibernate": {
+        "format": "󰤄",
+        "tooltip-format": "Hibernate",
+        "on-click": "systemctl hibernate"
+    },
+    "custom/reboot": {
+        "format": "",
+        "tooltip-format": "Reboot",
+        "on-click": "reboot"
+    },
+    "custom/shutdown":{
+        "format": "",
+        "tooltip-format": "Shutdown",
+        "on-click": "shutdown now"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 25,
+        "tooltip-format": "{title}\n{app_id}",
+        "on-click": "activate",
+        "ignore-list": [
+        "Alacritty"
+        ],
+    },
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-left-to-right": true,
+            "children-class": "drawer-child",
+            "click-to-reveal": true
+        },
+        "modules": [
+            "custom/hardware-wrap",
+            "custom/cpu",
+            "custom/igpu"
+        ]
+    },
+    "custom/hardware-wrap": {
+        "format": "",
+        "tooltip-format": "Hardware stats"
+    },
+    "custom/cpu": {
+        "exec": "uv run /home/jappe/.config/waybar/scripts/cpu_monitor.py",
+        "return-type": "json",
+        "format": "{}", // required for the custom output
+        "tooltip": true
+    },
+    "custom/igpu": {
+        "exec": "uv run /home/jappe/.config/waybar/scripts/igpu_monitor.py",
+        "return-type": "json",
+        "format": "{}", // required for the custom output
+        "tooltip": true
+    },
+}]

@@ -1,0 +1,3 @@
+description: csharp
+packages:
+  - dotnet-sdk # The .NET Core SDK

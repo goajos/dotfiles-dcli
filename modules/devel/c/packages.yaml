@@ -1,0 +1,3 @@
+description: c
+packages:
+  - clang # C language family frontend for LLVM

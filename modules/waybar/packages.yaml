@@ -1,0 +1,4 @@
+description: waybar
+packages:
+  - bc # An arbitrary precision calculator language
+  - waybar # Highly customizable Wayland bar for Sway and Wlroots based compositors

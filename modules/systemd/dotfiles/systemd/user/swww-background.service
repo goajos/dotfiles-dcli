@@ -1,0 +1,8 @@
+[Unit]
+Description=swww daemon for the niri background
+BindsTo=niri.service
+After=niri.service
+
+[Service]
+ExecStart=/usr/bin/swww-daemon --namespace niri-background
+

@@ -1,0 +1,7 @@
+description: misc
+dotfiles_sync: true
+dotfiles:
+  - source: settings.json
+    target: ~/.config/discord/settings.json
+services:
+

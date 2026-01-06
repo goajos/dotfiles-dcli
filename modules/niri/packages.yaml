@@ -1,0 +1,14 @@
+description: niri
+packages: 
+  - gnome-keyring # Stores passwords and encryption keys
+  - nautilus # Default file manager for GNOME
+  - niri # A scrollable-tiling Wayland compositor
+  - polkit-kde-agent # Daemon providing a polkit authentication UI for KDE
+  - socat # Multipurpose relay
+  # TODO: swww deprecated => switch to awww aur package?
+  - swww # A Solution to your Wayland Wallpaper Woes
+  - wl-clipboard # Command-line copy/paste utilities for Wayland
+  - xclip # Command line interface to the X11 clipboard
+  - xdg-desktop-portal-gnome # Backend implementation for xdg-desktop-portal for the GNOME desktop environment
+  - xdg-desktop-portal-gtk  # A backend implementation for xdg-desktop-portal using GTK
+  - xwayland-satellite # Xwayland outside your Wayland

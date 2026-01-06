@@ -1,0 +1,7 @@
+# TODO: setup bash shell properly
+description: shell
+dotfiles_sync: false
+dotfiles:
+  - source: .bashrc
+    target: ~/.bashrc
+services:

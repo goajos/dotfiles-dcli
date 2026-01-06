@@ -1,0 +1,4 @@
+description: python
+hook_behavior: ask
+post_install_hook: scripts/post-install-hook-python.sh
+services:

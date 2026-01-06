@@ -1,0 +1,27 @@
+description: base
+
+packages:
+  # Base system packages
+  - base # Minimal package set to define a basic Arch Linux insallation
+  - base-devel # Basic tools to build Arch Linux Packages
+  - btrfs-progs # Btrfs filesystem utilities
+  - intel-ucode # Microcode update files for Intel CPUs
+  - less # A terminal based program for viewing text files
+  - linux # The Linux kernel and modules
+  - linux-firmware # Firmware files for Linux - Default set
+  - man-db # A utility for reading man pages
+  - man-pages # Linux man pages
+  - networkmanager # Network connection manager and user applications
+
+  # Base util packages
+  - git # The fast distributed version control system
+  - sudo # Give certain users the ability to run some commands as root
+
+  # dcli dependencies 
+  - fzf # Command-line fuzzy finder
+  - paru # Feature packed AUR helper
+  # - timeshift # System backup tool (required for dcli backup commands)
+  - yay # Yet another yogurt. Pacman wrapper and AUR helper written in go. (paru backup)
+
+services:
+  - NetworkManager

@@ -1,0 +1,19 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/github_dark.toml"
+]
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font Mono" }
+
+[keyboard]
+bindings = [
+    { key = "Enter", mods = "Super", action = "ToggleFullscreen" }
+    ]
+
+[window]
+opacity = 0.80
+decorations_theme_variant = "Dark"
+
+[colors]
+transparent_background_colors = true

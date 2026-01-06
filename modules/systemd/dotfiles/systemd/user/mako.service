@@ -1,0 +1,7 @@
+[Unit]
+Description=mako
+BindsTo=niri.service
+After=niri.service
+
+[Service]
+ExecStart=/usr/bin/mako

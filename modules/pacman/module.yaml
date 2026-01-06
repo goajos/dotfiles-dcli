@@ -1,0 +1,5 @@
+description: pacman
+hook_behavior: ask
+post_install_hook: scripts/post-install-hook-pacman.sh
+services:
+

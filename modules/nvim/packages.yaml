@@ -1,0 +1,6 @@
+description: nvim
+packages:
+  - lua-language-server # Lua Language Server coded by Lua
+  - neovim-nightly-bin # NeoVim nightly build
+  - ripgrep # A search tool that combines the usability of ag with the raw speed of grep 
+  - tree-sitter-cli # CLI tool for developing, testing, and using Tree-sitter parsers

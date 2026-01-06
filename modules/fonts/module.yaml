@@ -1,0 +1,5 @@
+description: fonts
+dotfiles_sync: true
+hook_behavior: ask
+post_install_hook: scripts/post-install-hook-fonts.sh
+services:

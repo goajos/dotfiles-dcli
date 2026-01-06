@@ -1,0 +1,6 @@
+description: docker
+hook_behavior: ask
+post_install_hook: scripts/post-install-hook-docker.sh
+services:
+  - docker
+  - docker.socket
