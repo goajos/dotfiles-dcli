@@ -6,6 +6,7 @@ description: Arch Desktop
 # import:
 #   - hosts/shared/laptop-common.yaml
 
+# TODO: timeshift/snapper setup?
 # TODO: git module with agent + token setup?
 # Enabled modules
 enabled_modules:
@@ -44,7 +45,7 @@ exclude: []
 # Configuration backup settings
 config_backups:
   enabled: false
-  max_backups: 5
+  max_backups: 1
 
 # System backup settings
 system_backups:
@@ -55,7 +56,7 @@ system_backups:
   snapper_config: root
 
 # Settings
-auto_prune: false
+auto_prune: true
 
 aur_helper: paru
 # aur_helper: yay
