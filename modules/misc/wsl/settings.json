@@ -1,5 +1,6 @@
-// mklink "C:\Users\jcremers\AppData\Roaming\Code\User\settings.json" "\\wsl$\archlinux\home\jappe\Repositories\dotfiles\misc\code\wsl\settings.json"
-// mklink "C:\Users\jcremers\AppData\Roaming\Code\User\machine-settings.json" "\\wsl$\archlinux\home\jappe\Repositories\dotfiles\misc\code\wsl\machine-settings.json"
+// mklink "C:\Users\jcremers\AppData\Roaming\Code\User\settings.json" "\\wsl$\archlinux\home\jappe\Repositories\dotfiles\modules\misc\wsl\settings.json"
+// mklink "C:\Users\jcremers\AppData\Roaming\Code\User\machine-settings.json" "\\wsl$\archlinux\home\jappe\Repositories\dotfiles\modules\misc\wsl\machine-settings.json"
+// mklink "C:\Users\jcremers\AppData\Roaming\Code\User\keybindings.json" "\\wsl$\archlinux\home\jappe\Repositories\dotfiles\modules\misc\keybindings.json"
 {
     // windows transparency settings
     "glassit.alpha": 225,
