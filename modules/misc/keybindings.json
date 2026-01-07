@@ -19,12 +19,12 @@
         "when": "searchInputBoxFocus"
     },
     {
-        "key": "]d",
+        "key": "oem_6 d",
         "command": "go-to-next-error.next.error",
         "when": "editorFocus"
     },
     {
-        "key": "[d",
+        "key": "oem_4 d",
         "command": "go-to-next-error.prev.error",
         "when": "editorFocus"
     }
