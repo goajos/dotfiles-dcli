@@ -9,9 +9,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# run decman with the correct source file
-alias decman='decman --source /home/jappe/Repositories/dotfiles/source.py'
-
 alias vim='nvim'
 # bash vim mode
 export EDITOR='nvim' # opens current folder in nvim with 'v'
