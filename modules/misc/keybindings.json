@@ -1,3 +1,31 @@
 // Place your key bindings in this file to override the default
 [
+    // focus editor from panel
+    {
+        "key": "ctrl+w k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "activePanel == terminal || activePanel == workbench.panel.repl || activePanel == workbench.panel.output"
+    },
+    // focus editor after search to enable jumping with ]q and [q
+    {
+        "key": "enter",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.blur",
+                "workbench.action.focusActiveEditorGroup"
+            ]
+        },
+        "when": "searchInputBoxFocus"
+    },
+    {
+        "key": "]d",
+        "command": "go-to-next-error.next.error",
+        "when": "editorFocus"
+    },
+    {
+        "key": "[d",
+        "command": "go-to-next-error.prev.error",
+        "when": "editorFocus"
+    }
 ]

@@ -18,6 +18,31 @@ vim.keymap.set({"n", "v"}, "<Leader>p", '"_dP', { desc = "Paste without overwrit
 
 vim.keymap.set("n", "<Leader>/", ":noh<CR>", { desc = "Clear search highlighting" })
 
+vim.keymap.set("n", "<Leader>w", function()
+    vscode.action("workbench.action.files.save")
+end)
+vim.keymap.set("n", "<Leader>q", function()
+    vscode.action("workbench.action.closeActiveEditor")
+end)
+
+vim.keymap.set("n", "<Tab>", function()
+    vscode.action("workbench.action.nextEditor")
+    -- vscode.action("workbench.action.nextEditorInGroup")
+end)
+vim.keymap.set("n", "<S-Tab>", function()
+    vscode.action("workbench.action.previousEditor")
+    -- vscode.action("workbench.action.previousEditorInGroup")
+end)
+
+vim.keymap.set({ "n", "v" }, "]q", function()
+    vscode.action("search.action.focusNextSearchResult")
+    vscode.action("vscode-neovim.escape")
+end)
+vim.keymap.set({ "n", "v" }, "[q", function()
+    vscode.action("search.action.focusPreviousSearchResult")
+    vscode.action("vscode-neovim.escape")
+end)
+
 -- auto leave insert mode when changing buffers or window losing focus
 vim.api.nvim_create_autocmd({"BufLeave", "FocusLost"}, {
     pattern = "*",
