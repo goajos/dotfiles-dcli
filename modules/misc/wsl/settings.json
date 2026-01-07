@@ -55,7 +55,7 @@
     // ln -s /home/jappe/Repositories/dotfiles/modules/nvim/dotfiles/nvim/init.lua /home/jappe/.config/nvim/init.lua
     // ln -s /home/jappe/Repositories/dotfiles/modules/nvim/dotfiles/nvim/lua/config/{autocmds,globals,keymaps,lsp,options,theme,treesitter}.lua /home/jappe/.config/nvim/lua/config{autocmds,globals,keymaps,lsp,options,theme,treesitter}.lua
     "vscode-neovim.neovimInitVimPaths.linux": "/home/jappe/.config/nvim/init.lua",
-    "vscode-neovim.useWSL": true,
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/sbin/nvim",
     "vscode-neovim.wslDistribution": "archlinux",
     // files settings
     "files.trimTrailingWhitespace": true,
@@ -65,6 +65,8 @@
     "github.copilot.enable": {
         "*": false
     },
+    "vscode-neovim.useWSL": true,
+    "python.defaultInterpreterPath": "c:\\Python314\\python.exe",
     // "ruff.configuration": "${workspaceFolder}/pyproject.toml",
 }
 
