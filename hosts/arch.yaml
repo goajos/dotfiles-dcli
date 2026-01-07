@@ -1,14 +1,8 @@
 host: arch
 description: Arch Desktop
 
-# Import shared configurations (optional)
-# Example:
-# import:
-#   - hosts/shared/laptop-common.yaml
-
-# TODO: replace the decman setup within niri with dcli!
-# TODO: timeshift/snapper setup?
 # TODO: git module with agent + token setup?
+# TODO: setup wsl with dcli?
 # Enabled modules
 enabled_modules:
   - alacritty
@@ -53,18 +47,16 @@ services:
 # Configuration backup settings
 config_backups:
   enabled: false
-  max_backups: 1
 
 # System backup settings
 system_backups:
-  enabled: false
+  enabled: true
   backup_on_sync: false
-  backup_on_update: false
-  tool: timeshift
+  backup_on_update: true
+  tool: snapper
   snapper_config: root
 
 # Settings
 auto_prune: true
 
 aur_helper: paru
-# aur_helper: yay

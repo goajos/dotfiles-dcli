@@ -20,5 +20,5 @@ packages:
   # dcli dependencies 
   - fzf # Command-line fuzzy finder
   - paru # Feature packed AUR helper
-  # - timeshift # System backup tool (required for dcli backup commands)
+  - snapper # A tool for managing BTRFS and LVM snapshots
   - yay # Yet another yogurt. Pacman wrapper and AUR helper written in go. (paru backup)
