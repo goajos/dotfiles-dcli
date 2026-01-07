@@ -5,4 +5,3 @@ dotfiles:
     target: ~/.local/bin/cpu_monitor.py
   - source: igpu_monitor.py
     target: ~/.local/bin/igpu_monitor.py
-services:

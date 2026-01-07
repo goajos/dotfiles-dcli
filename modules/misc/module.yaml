@@ -6,5 +6,4 @@ dotfiles:
     target: ~/.config/Code/User/settings.json
   - source: keybindings.json
     target: ~/.config/Code/User/keybindings.json
-services:
 

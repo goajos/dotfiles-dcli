@@ -2,4 +2,3 @@ description: perf
 dotfiles_sync: false
 hook_behavior: ask
 post_install_hook: scripts/post-install-hook-perf.sh
-services:

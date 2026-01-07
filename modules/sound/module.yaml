@@ -3,5 +3,4 @@ dotfiles_sync: false
 dotfiles:
   - source: wp-vol
     target: ~/.local/bin/wp-vol
-services:
 

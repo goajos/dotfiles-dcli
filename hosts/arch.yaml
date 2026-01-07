@@ -44,6 +44,12 @@ packages: []
 # Exclude packages from base or modules
 exclude: []
 
+services:
+  enabled:
+    - bluetooth
+    - NetworkManager
+    - docker
+
 # Configuration backup settings
 config_backups:
   enabled: false
