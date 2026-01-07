@@ -43,6 +43,15 @@ vim.keymap.set({ "n", "v" }, "[q", function()
     vscode.action("vscode-neovim.escape")
 end)
 
+vim.keymap.set({ "n", "v" }, "]d", function()
+    vscode.action("go-to-next-error.next.error")
+    -- vscode.action("vscode-neovim.escape")
+end)
+vim.keymap.set({ "n", "v" }, "[d", function()
+    vscode.action("go-to-next-error.prev.error")
+    -- vscode.action("vscode-neovim.escape")
+end)
+
 -- auto leave insert mode when changing buffers or window losing focus
 vim.api.nvim_create_autocmd({"BufLeave", "FocusLost"}, {
     pattern = "*",
