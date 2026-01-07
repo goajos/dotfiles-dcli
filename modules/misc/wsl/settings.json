@@ -1,4 +1,5 @@
 // mklink "C:\Users\jcremers\AppData\Roaming\Code\User\settings.json" "\\wsl$\archlinux\home\jappe\Repositories\dotfiles\misc\code\wsl\settings.json"
+// mklink "C:\Users\jcremers\AppData\Roaming\Code\User\machine-settings.json" "\\wsl$\archlinux\home\jappe\Repositories\dotfiles\misc\code\wsl\machine-settings.json"
 {
     // windows transparency settings
     "glassit.alpha": 225,
@@ -50,7 +51,8 @@
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
-    // ln -s /home/jappe/Repositories/dotfiles/nvim/dotfiles/nvim/init.lua /home/jappe/.config/nvim/init.lua
+    // ln -s /home/jappe/Repositories/dotfiles/modules/nvim/dotfiles/nvim/init.lua /home/jappe/.config/nvim/init.lua
+    // ln -s /home/jappe/Repositories/dotfiles/modules/nvim/dotfiles/nvim/lua/config/{autocmds,globals,keymaps,lsp,options,theme,treesitter}.lua /home/jappe/.config/nvim/lua/config{autocmds,globals,keymaps,lsp,options,theme,treesitter}.lua
     "vscode-neovim.neovimInitVimPaths.linux": "/home/jappe/.config/nvim/init.lua",
     "vscode-neovim.useWSL": true,
     "vscode-neovim.wslDistribution": "archlinux",
