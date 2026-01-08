@@ -1,7 +1,6 @@
 host: arch
 description: Arch Desktop
 
-# TODO: git module with agent + token setup?
 # TODO: setup wsl with dcli?
 # Enabled modules
 enabled_modules:
@@ -19,6 +18,7 @@ enabled_modules:
   - devel/zig
   - fonts
   - fuzzel
+  - git 
   - mako
   - misc
   - niri

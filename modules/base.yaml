@@ -14,7 +14,7 @@ packages:
   - networkmanager # Network connection manager and user applications
 
   # Base util packages
-  - git # The fast distributed version control system
+  - openssh # SSH protocol implementation for remote login, command execution and file transfer
   - sudo # Give certain users the ability to run some commands as root
 
   # dcli dependencies 

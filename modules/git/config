@@ -1,0 +1,9 @@
+Host github.com
+    AddKeysToAgent yes
+    IdentitiesOnly yes
+    IdentityFile /home/jappe/.ssh/github-ssh-key
+
+Host gitlab.com
+    AddKeystoAgent yes
+    IdentitiesOnly yes
+    IdentityFile /home/jappe/.ssh/github-ssh-key

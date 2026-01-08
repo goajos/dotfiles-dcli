@@ -1,3 +1,4 @@
+# TODO: setup a btrfs/subvolume module to track snapshots and storage?
 description: waybar
 dotfiles_sync: true
 dotfiles:
