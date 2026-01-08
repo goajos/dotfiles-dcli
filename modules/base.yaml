@@ -18,7 +18,6 @@ packages:
   - sudo # Give certain users the ability to run some commands as root
 
   # dcli dependencies 
-  - fzf # Command-line fuzzy finder
   - paru # Feature packed AUR helper
   - snapper # A tool for managing BTRFS and LVM snapshots
   - yay # Yet another yogurt. Pacman wrapper and AUR helper written in go. (paru backup)

@@ -19,7 +19,6 @@ vim.api.nvim_create_autocmd({"WinEnter", "BufEnter"}, {
         end
     end
 })
-
 vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
     callback = function()
         vim.opt_local.cursorline = false
@@ -29,5 +28,13 @@ vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
             vim.opt_local.number = false
             vim.opt_local.relativenumber = false
         end
+    end
+})
+
+-- remap esc for closing the fzf terminal buffer
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "fzf",
+    callback = function()
+        vim.keymap.set("t", "<Esc>", "<Esc>")
     end
 })

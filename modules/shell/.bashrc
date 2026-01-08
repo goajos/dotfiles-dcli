@@ -1,17 +1,32 @@
-#
-# ~/.bashrc
-#
-
+#!/usr/bin/env bash
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-alias vim='nvim'
-# bash vim mode
-export EDITOR='nvim' # opens current folder in nvim with 'v'
+# Use bash-completion, if available, and avoid double-sourcing
+[[ $PS1 &&
+  ! ${BASH_COMPLETION_VERSINFO:-} &&
+  -f /usr/share/bash-completion/bash_completion ]] &&
+    . /usr/share/bash-completion/bash_completion
+
+export HISTCONTROL=erasedups:ignoredups:ignorespace
+
+export CLICOLOR=1
+
+alias grep="rg" 
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
+alias vim="nvim"
+export EDITOR="nvim"
+
+# interactive copy and move
+alias cp="cp -i"
+alias mv="mv -i"
+
+eval "$(fzf --bash)"
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_OPTS='--height 40% --layout reverse --border --color=fg:#f0f3f6,bg:#0a0c10,hl:#0a0c10 --color=fg+:#f0f3f6,bg+:#0f1b28,hl+:#ffb757 --color=info:#f0b72f,prompt:#71b7ff,pointer:#b780ff --color=marker:#26cd4d,spinner:#ffffff,header:#454a51'
 
 function yay()
 {

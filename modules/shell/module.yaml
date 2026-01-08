@@ -1,4 +1,4 @@
-# TODO: setup bash shell properly
+# TODO: finish setting up shell
 description: shell
 dotfiles_sync: false
 dotfiles:
