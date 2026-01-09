@@ -4,18 +4,14 @@ input {
 	        options "ctrl:nocaps"
         }
     }
-
-    mouse {
-    }
-
-    trackpoint {
-    }
 }
 
 prefer-no-csd
 layout {
-    gaps 16
+    gaps 5
+
     center-focused-column "never"
+    always-center-single-column
 
     preset-column-widths {
         proportion 0.33333
@@ -27,9 +23,9 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 4
+        width 2.5
         active-color "#7fc8ff"
-        inactive-color "#505050"
+        urgent-color "#ffb1af"
     }
 }
 
@@ -81,19 +77,16 @@ layer-rule {
     place-within-backdrop true
 }
 
-// code transparency
+// transparency
 window-rule {
-    match title=r#"Visual Studio Code"#
     draw-border-with-background false
     opacity 0.9
+}
+window-rule {
+    geometry-corner-radius 5
+    clip-to-geometry true
 }
 
-// firefox transparency
-window-rule {
-    match title=r#"Mozilla Firefox"#
-    draw-border-with-background false
-    opacity 0.9
-}
 
 window-rule {
     match title="GGPoker"
@@ -112,10 +105,6 @@ window-rule {
     match title=r#"No Limit Hold"#
     max-width 960
     max-height 720
-}
-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
 }
 
 window-rule {

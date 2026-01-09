@@ -1,4 +1,4 @@
-# TODO: finish setting up shell
+# TODO: finish setting up shell + bash completion?
 description: shell
 dotfiles_sync: false
 dotfiles:

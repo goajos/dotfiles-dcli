@@ -9,5 +9,5 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 -- Highlight the divider
-vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#7fc8ff", bold = true })
+vim.api.nvim_set_hl(0, "WinSeparator", { bold = true })
 
