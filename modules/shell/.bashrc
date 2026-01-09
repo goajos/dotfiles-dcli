@@ -15,7 +15,6 @@ export HISTCONTROL=erasedups:ignoredups:ignorespace
 export CLICOLOR=1
 
 alias grep="rg" 
-export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 alias vim="nvim"
 export EDITOR="nvim"
@@ -25,8 +24,8 @@ alias cp="cp -i"
 alias mv="mv -i"
 
 eval "$(fzf --bash)"
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-export FZF_DEFAULT_OPTS='--height 40% --layout reverse --color=fg:#f0f3f6,bg:#0a0c10,hl:#0a0c10 --color=fg+:#f0f3f6,bg+:#0f1b28,hl+:#ffb757 --color=info:#f0b72f,prompt:#71b7ff,pointer:#b780ff --color=marker:#26cd4d,spinner:#ffffff,header:#454a51'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --color=never --glob="!.git"'
+export FZF_DEFAULT_OPTS='--height 50% --layout reverse --color=fg:#f0f3f6,bg:#0a0c10,hl:#0a0c10 --color=fg+:#f0f3f6,bg+:#0f1b28,hl+:#ffb757 --color=info:#f0b72f,prompt:#71b7ff,pointer:#b780ff --color=marker:#26cd4d,spinner:#ffffff,header:#454a51'
 
 function yay()
 {

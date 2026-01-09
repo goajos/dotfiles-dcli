@@ -33,7 +33,7 @@ vim.opt.backup = false -- disable backup files
 vim.opt.undofile = true -- persistent undo
 
 vim.opt.grepprg = "rg --vimgrep" -- use ripgrep
-vim.opt.path:append("**") -- buildin fuzzy finding
+-- vim.opt.path:append("**") -- buildin fuzzy finding
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr =  "v:lua.vim.treesitter.foldexpr()"

@@ -1,6 +1,5 @@
 description: nvim
 packages:
-  - fzf # Command-line fuzzy finder
   - lua-language-server # Lua Language Server coded by Lua
   - neovim-nightly-bin # NeoVim nightly build
   - ripgrep # A search tool that combines the usability of ag with the raw speed of grep 
