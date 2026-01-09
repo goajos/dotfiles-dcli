@@ -11,15 +11,36 @@ if vim.fn.executable "rg" == 1 then
     vim.opt.findfunc = "v:lua.RgFindFiles"
 end
 
+local function debounce(func, delay_ms)
+    local timer = nil
+    local running = nil
+    return function(...)
+        if not running then
+            timer = assert(vim.uv.new_timer())
+        end
+        local argv = { ... }
+        -- assert(timer):start(delay_ms, 0, function()
+        assert(timer):start(delay_ms, 0, function()
+            assert(timer):stop()
+            running = nil
+            func(unpack(argv, 1, table.maxn(argv)))
+        end)
+    end
+end
 
 vim.api.nvim_create_autocmd({ "CmdlineChanged", "CmdlineLeave" }, {
     pattern = { "*" },
     group = vim.api.nvim_create_augroup("CmdlineAutocompletion", { clear = true }),
-    callback = function(e)
+    callback = debounce(
+        vim.schedule_wrap(function(e)
         local function should_enable_autocomplete()
             local cmdline_cmd = vim.fn.split(vim.fn.getcmdline(), " ")[1]
-            return cmdline_cmd == "find" or cmdline_cmd == "fin" 
+            local cmdline_type = vim.fn.getcmdtype()
+
+            return cmdline_type == '/' or cmdline_type == '?' or
+            (cmdline_type == ':' and (cmdline_cmd == "find" or cmdline_cmd == "fin"
                 or cmdline_cmd == "help" or cmdline_cmd == "h"
+                or cmdline_cmd == 'buffer' or cmdline_cmd == 'b'))
         end
 
         if e.event == "CmdlineChanged" and should_enable_autocomplete() then
@@ -30,5 +51,6 @@ vim.api.nvim_create_autocmd({ "CmdlineChanged", "CmdlineLeave" }, {
         if e.event == "CmdlineLeave" then
             vim.opt.wildmode = "full"
         end
-    end
+    end),
+    250)
 })
