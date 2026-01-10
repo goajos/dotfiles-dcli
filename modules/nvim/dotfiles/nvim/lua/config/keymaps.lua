@@ -17,6 +17,7 @@ vim.keymap.set("n", "<Leader>d", vim.diagnostic.open_float, { desc = "Floating l
 -- file
 vim.keymap.set("n", "<Leader>w", ":w<CR>", { desc = "Save current buffer" })
 vim.keymap.set("n", "<Leader>q", ":bd<CR>", { desc = "Close current buffer" })
+vim.keymap.set("n", "<Leader>f", ":find ", { desc = "Built-in fuzzy finding files" })
 
 -- term
 vim.keymap.set("n", "<Leader>t", ":term<CR>", { desc = "Open terminal buffer" })
@@ -26,3 +27,4 @@ vim.keymap.set("t", "<Leader><Esc>", "<Esc>", { desc = "Send <Esc> to terminal b
 -- buffers
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<Leader>b", ":buffer ", { desc = "Builtin fuzzy finding buffers" })

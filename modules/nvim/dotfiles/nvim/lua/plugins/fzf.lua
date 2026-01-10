@@ -1,1 +1,1 @@
-vim.pack.add { "https://github.com/junegunn/fzf.vim" }
+-- vim.pack.add { "https://github.com/junegunn/fzf.vim" }

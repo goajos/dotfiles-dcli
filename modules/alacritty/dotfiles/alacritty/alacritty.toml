@@ -1,15 +1,15 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/github_dark.toml"
+    "~/.config/alacritty/themes/theme.toml"
 ]
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono" }
 
-[keyboard]
-bindings = [
-    { key = "Enter", mods = "Super", action = "ToggleFullscreen" }
-    ]
+# [keyboard]
+# bindings = [
+#     { key = "Enter", mods = "Super", action = "ToggleFullscreen" }
+#     ]
 
 [window]
 opacity = 0.80

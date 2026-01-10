@@ -1,3 +1,4 @@
 description: rust
 packages:
   - rustup # The Rust toolchain installer
+  - rust-analyzer # Rust compiler front-end for IDEs

@@ -24,8 +24,8 @@ layout {
 
     focus-ring {
         width 2.5
-        active-color "#7fc8ff"
-        urgent-color "#ffb1af"
+        active-color "#ACAFDFff"
+        urgent-color "#c6c8c9ff"
     }
 }
 
@@ -38,9 +38,9 @@ spawn-sh-at-startup "systemctl --user start waybar.service"
 
 // backgrounds
 spawn-sh-at-startup "systemctl --user start swww-background.service"
-spawn-sh-at-startup "swww img -n niri-background /home/jappe/Pictures/Backgrounds/dark-abstract.jpg"
+spawn-sh-at-startup "swww img -n niri-background /home/jappe/Pictures/Backgrounds/adventure-time.jpg"
 spawn-sh-at-startup "systemctl --user start swww-overview.service"
-spawn-sh-at-startup "swww img -n niri-overview /home/jappe/Pictures/Backgrounds/dark-abstract-5k.jpg"
+spawn-sh-at-startup "swww img -n niri-overview /home/jappe/Pictures/Backgrounds/solid_#ACAFDF.jpg"
 
 // floating windows
 spawn-sh-at-startup "systemctl --user start dynamic-window-rules.service"
@@ -63,15 +63,6 @@ spawn-sh-at-startup "systemctl --user start bt-auto-connect.service"
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-animations {
-}
-
-// mako transparency
-layer-rule {
-    match namespace="^notifications$"
-    opacity 0.8
-}
-
 layer-rule {
     match namespace="swww-daemonniri-overview"
     place-within-backdrop true
@@ -83,7 +74,7 @@ window-rule {
     opacity 0.9
 }
 window-rule {
-    geometry-corner-radius 5
+    geometry-corner-radius 12
     clip-to-geometry true
 }
 
@@ -247,8 +238,8 @@ recent-windows {
     open-delay-ms 150
 
     highlight {
-        active-color "#999999ff"
-        urgent-color "#ff9999ff"
+        active-color "#ACAFDFff"
+        urgent-color "#c6c8c9ff"
         padding 30
         corner-radius 0
     }
@@ -261,7 +252,5 @@ recent-windows {
     binds {
         Mod+Tab         { next-window; }
         Mod+Shift+Tab   { previous-window; }
-        Mod+grave       { next-window     filter="app-id"; }
-        Mod+Shift+grave { previous-window filter="app-id"; }
     }
 }

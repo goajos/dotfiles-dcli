@@ -3,5 +3,3 @@ dotfiles_sync: true
 dotfiles:
   - source: dynamic_window_rules.py
     target: ~/.local/bin/dynamic_window_rules.py
-hook_behavior: ask
-post_install_hook: scripts/post-install-hook-niri.sh

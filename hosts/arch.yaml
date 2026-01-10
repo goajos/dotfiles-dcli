@@ -29,6 +29,7 @@ enabled_modules:
   - shell
   - sound
   - systemd
+  - theme
   - waybar
   - waybar/perf
 
