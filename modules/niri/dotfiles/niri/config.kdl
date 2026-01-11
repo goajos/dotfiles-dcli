@@ -24,8 +24,8 @@ layout {
 
     focus-ring {
         width 2.5
-        active-color "#ACAFDFff"
-        urgent-color "#c6c8c9ff"
+        active-color "#F2B6F2ff"
+        urgent-color "#c7c6d0ff"
     }
 }
 
@@ -38,9 +38,9 @@ spawn-sh-at-startup "systemctl --user start waybar.service"
 
 // backgrounds
 spawn-sh-at-startup "systemctl --user start swww-background.service"
-spawn-sh-at-startup "swww img -n niri-background /home/jappe/Pictures/Backgrounds/adventure-time.jpg"
+spawn-sh-at-startup "swww img -n niri-background /home/jappe/Pictures/Backgrounds/lofi-boy.jpg"
 spawn-sh-at-startup "systemctl --user start swww-overview.service"
-spawn-sh-at-startup "swww img -n niri-overview /home/jappe/Pictures/Backgrounds/solid_#ACAFDF.jpg"
+spawn-sh-at-startup "swww img -n niri-overview /home/jappe/Pictures/Backgrounds/solid_#F2B6F2.jpg"
 
 // floating windows
 spawn-sh-at-startup "systemctl --user start dynamic-window-rules.service"
@@ -238,8 +238,8 @@ recent-windows {
     open-delay-ms 150
 
     highlight {
-        active-color "#ACAFDFff"
-        urgent-color "#c6c8c9ff"
+        active-color "#F2B6F2ff"
+        urgent-color "#c7c6d0ff"
         padding 30
         corner-radius 0
     }

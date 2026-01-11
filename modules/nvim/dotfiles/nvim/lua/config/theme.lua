@@ -1,24 +1,24 @@
 local colors = {
-    background = "#1e252a",
-    foreground = "#c6c8c9",
-    text = "#c6c8c9",
-    cursor = "#c6c8c9",
-    black = "#1e252a",
-    red = "#A89EB6",
-    green = "#F8959C",
-    yellow = "#FE94A0",
-    blue = "#FEAEA2",
-    magenta = "#FCDBAC",
-    cyan = "#ACAFDF",
-    white = "#c6c8c9",
-    bright_black = "#64727b",
-    bright_red = "#A89EB6",
-    bright_green = "#F8959C",
-    bright_yellow = "#FE94A0",
-    bright_blue = "#FEAEA2",
-    bright_magenta = "#FCDBAC",
-    bright_cyan = "#ACAFDF",
-    bright_white = "#c6c8c9",
+    background = "#221d44",
+    foreground = "#c7c6d0",
+    text = "#c7c6d0",
+    cursor = "#c7c6d0",
+    black = "#221d44",
+    red = "#D56DE5",
+    green = "#7B83EA",
+    yellow = "#9B95EE",
+    blue = "#E793EE",
+    magenta = "#C8AEF3",
+    cyan = "#F2B6F2",
+    white = "#c7c6d0",
+    bright_black = "#6f6c84",
+    bright_red = "#D56DE5",
+    bright_green = "#7B83EA",
+    bright_yellow = "#9B95EE",
+    bright_blue = "#E793EE",
+    bright_magenta = "#C8AEF3",
+    bright_cyan = "#F2B6F2",
+    bright_white = "#c7c6d0",
 }
 
 -- terminal background comes through
@@ -44,4 +44,7 @@ vim.api.nvim_set_hl(0, "Cursor",{ bg = "NONE", fg = colors.cursor })
 vim.api.nvim_set_hl(0, "CursorLineNr",{ bg = "NONE", fg = colors.cursor, bold = true })
 vim.api.nvim_set_hl(0, "Delimiter",{ fg = colors.cursor })
 
+vim.api.nvim_set_hl(0, "netrwDir",{ fg = colors.cyan })
+vim.api.nvim_set_hl(0, "netrwExe",{ fg = colors.red })
+vim.api.nvim_set_hl(0, "netrwSymlink",{ fg = colors.green })
 -- vim.api.nvim_set_hl(0, "",{ bg = colors., fg = colors.})

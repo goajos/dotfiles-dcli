@@ -1,3 +1,4 @@
 description: shell
 packages:
   - bash-completion # Programmable completion for the bash shell
+  - fastfetch # A feature-rich and performance oriented neofetch like system information tool

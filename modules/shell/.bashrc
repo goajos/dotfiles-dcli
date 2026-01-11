@@ -52,3 +52,5 @@ function yeet()
 
 # uv
 export PATH="/home/jappe/.local/bin:$PATH"
+
+fastfetch

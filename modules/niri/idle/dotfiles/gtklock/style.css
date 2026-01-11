@@ -1,6 +1,6 @@
-/* TODO: the lock background is low res?*/
 window {
-    background-image: url("/home/jappe/Pictures/Backgrounds/adventure-time.jpg");
+    background-image: url("/home/jappe/Pictures/Backgrounds/lofi-boy.jpg");
+    background-size: cover;
 }
 
 label {
