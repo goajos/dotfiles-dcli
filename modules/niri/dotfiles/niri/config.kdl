@@ -24,8 +24,14 @@ layout {
 
     focus-ring {
         width 2.5
-        active-color "#F2B6F2ff"
-        urgent-color "#c7c6d0ff"
+        active-gradient from="#F2B6F2ff" to="#7B83EAff" angle=90
+    }
+
+    tab-indicator {
+        active-gradient from="#F2B6F2ff" to="#7B83EAff" angle=90
+        position "bottom" 
+        length total-proportion=0.975
+        place-within-column
     }
 }
 
