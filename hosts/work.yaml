@@ -1,0 +1,53 @@
+host: work
+description: Work Laptop
+
+# TODO: how to set up git/misc/shell on wsl?
+# Enabled modules
+enabled_modules:
+  - alacritty
+  - fonts
+  - fuzzel
+  - mako
+  - niri
+  - nvim
+  - pacman
+  - systemd
+  - theme
+
+# Host-specific packages
+packages: 
+  # devel/python
+  - python
+  - ty
+  - uv
+  # git
+  - git
+  # shell
+  - bash-completion
+  - fastfetch
+
+# Exclude packages from base or modules
+exclude:
+  - base
+  - btrfs-progs
+  - intel-ucode
+  - linux
+  - linux-firmware
+  - networkmanager
+  - snapper
+  
+services:
+  enabled:
+
+# Configuration backup settings
+config_backups:
+  enabled: false
+
+# System backup settings
+system_backups:
+  enabled: false
+
+# Settings
+auto_prune: true
+
+aur_helper: yay

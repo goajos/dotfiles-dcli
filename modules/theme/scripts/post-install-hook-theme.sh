@@ -2,3 +2,5 @@
 
 su - jappe -c 'mkdir -p /home/jappe/Pictures/Backgrounds'
 su - jappe -c 'cp -r -u /home/jappe/.config/arch-config/modules/theme/backgrounds/* /home/jappe/Pictures/Backgrounds/'
+
+su - jappe -c DISPLAY=:0 .config/arch-config/modules/theme/scripts/dconf.sh
