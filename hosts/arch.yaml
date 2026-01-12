@@ -1,7 +1,6 @@
 host: arch
 description: Arch Desktop
 
-# TODO: setup wsl with dcli?
 # Enabled modules
 enabled_modules:
   - alacritty
