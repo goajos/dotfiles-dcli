@@ -2,7 +2,48 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+function trunc_pwd()
+{
+    local wd_max_len=25
+    local trunc_sym=".."
+    local wd=${PWD##*/}
+    wd_max_len=$(((wd_max_len < ${#wd}) ? ${#wd} : wd_max_len ))
+    TRUNC_WD=${PWD/#$HOME/\~}
+    local wd_offset=$((${#TRUNC_WD} - wd_max_len))
+
+    if [ ${wd_offset} -gt "0" ]; then
+        TRUNC_WD=${TRUNC_WD:$wd_offset:$wd_max_len}
+        TRUNC_WD=${trunc_sym}/${TRUNC_WD#*/}
+    fi
+}
+
+function bash_prompt() {
+    function hex_to_rgb()
+    {
+      local hex=${1#\#}
+      printf "%d;%d;%d" 0x${hex:0:2} 0x${hex:2:2} 0x${hex:4:2}
+    }
+    function rgb_to_background()
+    {
+        printf "\e[48;2;${1}m%s\e[0m" "$2" 
+    }
+    function rgb_to_foreground() 
+    {
+        printf "\e[38;2;${1}m%s\e[0m" "$2" 
+    }
+
+    TRIANGLE=$'\uE0B0'
+    PS1_RGB_USER=$(hex_to_rgb '#D56DE5')
+    PS1_RGB_HOST=$(hex_to_rgb '#7B83EA')
+    PS1_RGB_WDBG=$(hex_to_rgb '#c7c6d0') 
+    PS1_RGB_WDFG=$(hex_to_rgb '#221d44')
+    # PS1="\u@\h:\w \$(date +%d-%m-%y\ %T) \\$ "
+    PS1="$(rgb_to_background "$PS1_RGB_USER" '\u')$(rgb_to_background "$PS1_RGB_HOST" $(rgb_to_foreground "$PS1_RGB_USER" "$TRIANGLE"))$(rgb_to_background "$PS1_RGB_HOST" '\h')$(rgb_to_background "$PS1_RGB_WDBG" $(rgb_to_foreground "$PS1_RGB_HOST" "$TRIANGLE"))$(rgb_to_background "$PS1_RGB_WDBG" $(rgb_to_foreground "$PS1_RGB_WDFG" "$TRUNC_WD"))$(rgb_to_foreground "$PS1_RGB_WDBG" "$TRIANGLE") "
+}
+
+PROMPT_COMMAND=trunc_pwd
+bash_prompt
+unset bash_prompt
 
 # Use bash-completion, if available, and avoid double-sourcing
 [[ $PS1 &&
@@ -14,7 +55,7 @@ export HISTCONTROL=erasedups:ignoredups:ignorespace
 
 export CLICOLOR=1
 
-alias grep="rg" 
+alias grep="rg"
 
 alias vim="nvim"
 export EDITOR="nvim"
@@ -26,7 +67,6 @@ alias mv="mv -i"
 eval "$(fzf --bash)"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --color=never --glob="!.git"'
 export FZF_DEFAULT_OPTS='--height 50% --layout reverse'
-# export FZF_DEFAULT_OPTS='--height 50% --layout reverse --color=fg:#f0f3f6,bg:#0a0c10,hl:#0a0c10 --color=fg+:#f0f3f6,bg+:#0f1b28,hl+:#ffb757 --color=info:#f0b72f,prompt:#71b7ff,pointer:#b780ff --color=marker:#26cd4d,spinner:#ffffff,header:#454a51'
 
 function yay()
 {

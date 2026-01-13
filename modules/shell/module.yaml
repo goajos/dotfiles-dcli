@@ -1,4 +1,4 @@
-# TODO: finish setting up shell + bash completion?
+# TODO: add conditional git branch to shell?
 description: shell
 dotfiles_sync: false
 dotfiles:
