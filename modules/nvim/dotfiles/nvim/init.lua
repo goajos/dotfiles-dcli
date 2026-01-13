@@ -1,3 +1,4 @@
+--:lua vim.pack.del({"fzf.vim", "github-nvim-theme"})
 if vim.g.vscode then
     require("config.vscode_options")
 else
@@ -9,7 +10,6 @@ else
     require("config.usercmds")
 
     require("plugins.cmdline")
-    -- require("plugins.fzf")
     require("plugins.lsp")
     require("plugins.treesitter")
 end

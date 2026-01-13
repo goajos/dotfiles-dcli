@@ -2,12 +2,12 @@ sort=-time
 layer=overlay
 default-timeout=10000
 border-radius=12
-background-color=#221d4480
-text-color=#c7c6d0ff
-border-color=#F2B6F2ff
+background-color=#110d2080
+text-color=#c3c2c7ff
+border-color=#7a72b3ff
 font=JetBrainsMono Nerd Font Mono 14
 # Color of progression bar
-progress-color=over #F2B6F280
+progress-color=over #7a72b380
 
 [urgency=high]
 default-timeout=0
