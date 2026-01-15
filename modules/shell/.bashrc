@@ -22,10 +22,10 @@ function reset()
 }
 
 TRIANGLE=$'\uE0B0'
-RGB_USER=$(hex_to_rgb '#eb6f92')
-RGB_HOST=$(hex_to_rgb '#31748f')
-RGB_WDBG=$(hex_to_rgb '#e0def4') 
-RGB_WDFG=$(hex_to_rgb '#191724')
+RGB_USER=$(hex_to_rgb "#eb6f92")
+RGB_HOST=$(hex_to_rgb "#31748f")
+RGB_WDBG=$(hex_to_rgb "#e0def4") 
+RGB_WDFG=$(hex_to_rgb "#191724")
 
 # PS1="\u@\h:\w \$(date +%d-%m-%y\ %T) \\$ "
 # each color printed section should be guarded with \[ \]
@@ -57,9 +57,22 @@ export EDITOR="nvim"
 alias cp="cp -i"
 alias mv="mv -i"
 
+FZF_FG="#9ccfd8"
+FZF_FGP="#e0def4"
+FZF_BG="#191724"
+FZF_BGP="#26233a"
+FZF_HL="#ebbcba"
+FZF_BORDER=""
+FZF_HEADER=""
+FZF_GUTTER=""
+FZF_PROMPT=""
+
+# TODO: finish the rest of the fzf colors?
 eval "$(fzf --bash)"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --color=never --glob="!.git"'
-export FZF_DEFAULT_OPTS='--height 50% --layout reverse'
+export FZF_DEFAULT_OPTS="--height 50% --layout reverse"
+export FZF_DEFAULT_OPTS+="--color=fg:"$FZF_FG",bg:"$FZF_BG",hl:"$FZF_HL""
+export FZF_DEFAULT_OPTS+="--color=fg+:"$FZF_FGP",bg+:"$FZF_BGP",hl+:"$FZF_FL""
 
 function yay()
 {

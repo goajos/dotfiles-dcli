@@ -2,6 +2,7 @@
     // editor settings
     "editor.lineNumbers": "relative",
     "editor.fontFamily": "JetBrains Mono Nerd Font",
+    "workbench.colorTheme": "Rosé Pine",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": false,
@@ -55,6 +56,4 @@
     "github.copilot.enable": {
         "*": false
     },
-    "zig.zls.enabled": "off",
-    "workbench.colorTheme": "Rosé Pine",
 }
