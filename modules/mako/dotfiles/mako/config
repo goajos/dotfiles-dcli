@@ -7,7 +7,7 @@ text-color=#c3c2c7ff
 border-color=#7a72b3ff
 font=JetBrainsMono Nerd Font Mono 14
 # Color of progression bar
-progress-color=over #7a72b380
+progress-color=over #d26ce580
 
 [urgency=high]
 default-timeout=0

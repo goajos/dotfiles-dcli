@@ -22,8 +22,8 @@ function reset()
 }
 
 TRIANGLE=$'\uE0B0'
-RGB_USER=$(hex_to_rgb '#452f89')
-RGB_HOST=$(hex_to_rgb '#603390')
+RGB_USER=$(hex_to_rgb '#5a5dae')
+RGB_HOST=$(hex_to_rgb '#9d51ab')
 RGB_WDBG=$(hex_to_rgb '#c3c2c7') 
 RGB_WDFG=$(hex_to_rgb '#110d20')
 
