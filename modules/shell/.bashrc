@@ -22,10 +22,10 @@ function reset()
 }
 
 TRIANGLE=$'\uE0B0'
-RGB_USER=$(hex_to_rgb '#5a5dae')
-RGB_HOST=$(hex_to_rgb '#9d51ab')
-RGB_WDBG=$(hex_to_rgb '#c3c2c7') 
-RGB_WDFG=$(hex_to_rgb '#110d20')
+RGB_USER=$(hex_to_rgb '#eb6f92')
+RGB_HOST=$(hex_to_rgb '#31748f')
+RGB_WDBG=$(hex_to_rgb '#e0def4') 
+RGB_WDFG=$(hex_to_rgb '#191724')
 
 # PS1="\u@\h:\w \$(date +%d-%m-%y\ %T) \\$ "
 # each color printed section should be guarded with \[ \]

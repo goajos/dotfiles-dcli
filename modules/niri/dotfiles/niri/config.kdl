@@ -24,11 +24,11 @@ layout {
 
     focus-ring {
         width 2.5
-        active-gradient from="#7a72b3ff" to="#603390ff" angle=90
+        active-gradient from="#ebbcbaff" to="#31748fff" angle=90
     }
 
     tab-indicator {
-        active-gradient from="#7a72b3ff" to="#603390ff" angle=90
+        active-gradient from="#ebbcbaff" to="#31748fff" angle=90
         position "bottom" 
         length total-proportion=0.975
         place-within-column
@@ -46,7 +46,7 @@ spawn-sh-at-startup "systemctl --user start waybar.service"
 spawn-sh-at-startup "systemctl --user start swww-background.service"
 spawn-sh-at-startup "swww img -n niri-background /home/jappe/Pictures/Backgrounds/lofi-boy.jpg"
 spawn-sh-at-startup "systemctl --user start swww-overview.service"
-spawn-sh-at-startup "swww img -n niri-overview /home/jappe/Pictures/Backgrounds/solid_#7a72b3.jpg"
+spawn-sh-at-startup "swww img -n niri-overview /home/jappe/Pictures/Backgrounds/solid_#ebbcba.jpg"
 
 // floating windows
 spawn-sh-at-startup "systemctl --user start dynamic-window-rules.service"

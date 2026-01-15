@@ -56,4 +56,5 @@
         "*": false
     },
     "zig.zls.enabled": "off",
+    "workbench.colorTheme": "Rosé Pine",
 }
