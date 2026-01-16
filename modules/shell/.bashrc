@@ -57,22 +57,28 @@ export EDITOR="nvim"
 alias cp="cp -i"
 alias mv="mv -i"
 
-FZF_FG="#9ccfd8"
+FZF_FG="#e0def4"
 FZF_FGP="#e0def4"
 FZF_BG="#191724"
-FZF_BGP="#26233a"
-FZF_HL="#ebbcba"
-FZF_BORDER=""
-FZF_HEADER=""
-FZF_GUTTER=""
-FZF_PROMPT=""
+FZF_BGP="#31748f"
+FZF_HL="#eb6f92"
+FZF_BORDER="#31748f"
+FZF_HEADER="#31748f"
+FZF_GUTTER="#191724"
+FZF_SPINNER="#eb6f92"
+FZF_INFO="#e0def4"
+FZF_POINTER="#eb6f92"
+FZF_MARKER="#eb6f92"
+FZF_PROMPT="#e0def4"
 
-# TODO: finish the rest of the fzf colors?
 eval "$(fzf --bash)"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --color=never --glob="!.git"'
 export FZF_DEFAULT_OPTS="--height 50% --layout reverse"
-export FZF_DEFAULT_OPTS+="--color=fg:"$FZF_FG",bg:"$FZF_BG",hl:"$FZF_HL""
-export FZF_DEFAULT_OPTS+="--color=fg+:"$FZF_FGP",bg+:"$FZF_BGP",hl+:"$FZF_FL""
+export FZF_DEFAULT_OPTS+=" --color=fg:"$FZF_FG",bg:"$FZF_BG",hl:"$FZF_HL""
+export FZF_DEFAULT_OPTS+=" --color=fg+:"$FZF_FGP",bg+:"$FZF_BGP",hl+:"$FZF_HL""
+export FZF_DEFAULT_OPTS+=" --color=border:"$FZF_BORDER",header:"$FZF_HEADER",gutter:"$FZF_GUTTER""
+export FZF_DEFAULT_OPTS+=" --color=spinner:"$FZF_SPINNER",info:"$FZF_INFO""
+export FZF_DEFAULT_!OPTS+=" --color=pointer:"$FZF_POINTER",marker:"$FZF_MARKER",prompt:"$FZF_PROMPT""
 
 function yay()
 {
