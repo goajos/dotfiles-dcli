@@ -3,6 +3,42 @@
 [[ $- != *i* ]] && return
 
 # https://github.com/andresgongora/bash-tools/blob/62db15580482853cb3cfb177420e069d1574cf3f/bash-tools/shorten_path.sh
+function shorten_path()
+{
+	local path="$PWD"
+	local max_length=25
+	local trunc_symbol=${3:-"…"}
+
+	if   [ -z "$path" ]; then
+		echo ""
+		exit
+	fi
+
+	local path=${path/#$HOME/\~}
+
+	local dir=${path##*/}
+	local dir_length=${#dir}
+	local path_length=${#path}
+	local print_length=$(( ( max_length < dir_length ) ? dir_length : max_length ))
+
+	if [ $path_length -gt $print_length ]; then
+		local offset=$(( $path_length - $print_length ))
+		local truncated_path=${path:$offset}
+		local clean_path="/${truncated_path#*/}"
+        local removed_path=${path%%"$clean_path"}
+
+        if [ "$removed_path" == "~" ]; then
+            local short_path="~${clean_path}"
+        else
+		    local short_path=${trunc_symbol}${clean_path}
+        fi
+	else
+		local short_path=$path
+	fi
+
+	echo $short_path
+}
+
 function hex_to_rgb()
 {
   local hex=${1#\#}
@@ -10,11 +46,11 @@ function hex_to_rgb()
 }
 function rgb_to_bg()
 {
-    printf "\e[48;2;%sm" "$1" 
+    printf "\e[48;2;%sm" "$1"
 }
-function rgb_to_fg() 
+function rgb_to_fg()
 {
-    printf "\e[38;2;%sm" "$1" 
+    printf "\e[38;2;%sm" "$1"
 }
 function reset()
 {
@@ -24,7 +60,7 @@ function reset()
 TRIANGLE=$'\uE0B0'
 RGB_USER=$(hex_to_rgb "#eb6f92")
 RGB_HOST=$(hex_to_rgb "#31748f")
-RGB_WDBG=$(hex_to_rgb "#e0def4") 
+RGB_WDBG=$(hex_to_rgb "#e0def4")
 RGB_WDFG=$(hex_to_rgb "#191724")
 
 # PS1="\u@\h:\w \$(date +%d-%m-%y\ %T) \\$ "
@@ -33,7 +69,8 @@ PS1="\[$(rgb_to_bg "$RGB_USER")\]\u " # user
 PS1+="\[$(rgb_to_fg "$RGB_USER")$(rgb_to_bg "$RGB_HOST")\]$TRIANGLE"
 PS1+="\[$(reset)$(rgb_to_bg "$RGB_HOST")\]\h "
 PS1+="\[$(rgb_to_fg "$RGB_HOST")$(rgb_to_bg "$RGB_WDBG")\]$TRIANGLE"
-PS1+="\[$(rgb_to_fg "$RGB_WDFG")\]\w " # working directory TODO: shorten path
+# \$(shorten_path) so that it gets dynamically updated
+PS1+="\[$(rgb_to_fg "$RGB_WDFG")\]\$(shorten_path) " # working directory
 PS1+="\[$(reset)$(rgb_to_fg "$RGB_WDBG")\]$TRIANGLE"
 PS1+="\[$(reset)\] "
 
