@@ -1,6 +1,7 @@
-# TODO: add conditional git branch to shell?
 description: shell
 dotfiles_sync: false
 dotfiles:
   - source: .bashrc
     target: ~/.bashrc
+  - source: git-prompt.sh
+    target: ~/git-prompt.sh

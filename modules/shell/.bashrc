@@ -2,6 +2,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# to enable __git_ps1
+. ~/git-prompt.sh
+
 # https://github.com/andresgongora/bash-tools/blob/62db15580482853cb3cfb177420e069d1574cf3f/bash-tools/shorten_path.sh
 function shorten_path()
 {
@@ -67,11 +70,14 @@ RGB_WDFG=$(hex_to_rgb "#191724")
 # each color printed section should be guarded with \[ \]
 PS1="\[$(rgb_to_bg "$RGB_USER")\]\u " # user
 PS1+="\[$(rgb_to_fg "$RGB_USER")$(rgb_to_bg "$RGB_HOST")\]$TRIANGLE"
-PS1+="\[$(reset)$(rgb_to_bg "$RGB_HOST")\]\h "
+PS1+="\[$(reset)$(rgb_to_bg "$RGB_HOST")\]\h " # host
 PS1+="\[$(rgb_to_fg "$RGB_HOST")$(rgb_to_bg "$RGB_WDBG")\]$TRIANGLE"
 # \$(shorten_path) so that it gets dynamically updated
 PS1+="\[$(rgb_to_fg "$RGB_WDFG")\]\$(shorten_path) " # working directory
 PS1+="\[$(reset)$(rgb_to_fg "$RGB_WDBG")\]$TRIANGLE"
+# \$(__git_ps1) so that it gets dynamically updated
+#TODO: add a color depending on the git status?
+PS1+="\$(__git_ps1 '(%s)')"
 PS1+="\[$(reset)\] "
 
 
