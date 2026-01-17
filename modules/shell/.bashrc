@@ -4,6 +4,8 @@
 
 # to enable __git_ps1
 . ~/git-prompt.sh
+GIT_PS1_SHOWCOLORHINTS=1
+GIT_PS1_SHOWDIRTYSTATE=1
 
 # https://github.com/andresgongora/bash-tools/blob/62db15580482853cb3cfb177420e069d1574cf3f/bash-tools/shorten_path.sh
 function shorten_path()
