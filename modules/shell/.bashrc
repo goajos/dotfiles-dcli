@@ -78,7 +78,7 @@ export FZF_DEFAULT_OPTS+=" --color=fg:"$FZF_FG",bg:"$FZF_BG",hl:"$FZF_HL""
 export FZF_DEFAULT_OPTS+=" --color=fg+:"$FZF_FGP",bg+:"$FZF_BGP",hl+:"$FZF_HL""
 export FZF_DEFAULT_OPTS+=" --color=border:"$FZF_BORDER",header:"$FZF_HEADER",gutter:"$FZF_GUTTER""
 export FZF_DEFAULT_OPTS+=" --color=spinner:"$FZF_SPINNER",info:"$FZF_INFO""
-export FZF_DEFAULT_!OPTS+=" --color=pointer:"$FZF_POINTER",marker:"$FZF_MARKER",prompt:"$FZF_PROMPT""
+export FZF_DEFAULT_OPTS+=" --color=pointer:"$FZF_POINTER",marker:"$FZF_MARKER",prompt:"$FZF_PROMPT""
 
 function yay()
 {

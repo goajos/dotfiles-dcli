@@ -11,5 +11,6 @@ else
 
     require("plugins.cmdline")
     require("plugins.lsp")
+    require("plugins.lualine")
     require("plugins.treesitter")
 end
