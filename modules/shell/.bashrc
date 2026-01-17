@@ -4,7 +4,6 @@
 
 # to enable __git_ps1
 . ~/git-prompt.sh
-GIT_PS1_SHOWCOLORHINTS=1
 GIT_PS1_SHOWDIRTYSTATE=1
 
 # https://github.com/andresgongora/bash-tools/blob/62db15580482853cb3cfb177420e069d1574cf3f/bash-tools/shorten_path.sh
@@ -43,7 +42,6 @@ function shorten_path()
 
 	echo $short_path
 }
-
 function hex_to_rgb()
 {
   local hex=${1#\#}
@@ -61,6 +59,18 @@ function reset()
 {
     printf "\e[0m"
 }
+function git_status_color()
+{
+    if git rev-parse --is-inside-work-tree>/dev/null 2>&1; then
+        if ! git diff --quiet 2>/dev/null; then
+            echo "$RGB_USER"
+        else
+            echo "$RGB_HOST"
+        fi
+    else
+        echo ""
+    fi
+}
 
 TRIANGLE=$'\uE0B0'
 RGB_USER=$(hex_to_rgb "#eb6f92")
@@ -76,10 +86,14 @@ PS1+="\[$(reset)$(rgb_to_bg "$RGB_HOST")\]\h " # host
 PS1+="\[$(rgb_to_fg "$RGB_HOST")$(rgb_to_bg "$RGB_WDBG")\]$TRIANGLE"
 # \$(shorten_path) so that it gets dynamically updated
 PS1+="\[$(rgb_to_fg "$RGB_WDFG")\]\$(shorten_path) " # working directory
-PS1+="\[$(reset)$(rgb_to_fg "$RGB_WDBG")\]$TRIANGLE"
-# \$(__git_ps1) so that it gets dynamically updated
-#TODO: add a color depending on the git status?
-PS1+="\$(__git_ps1 '(%s)')"
+GIT_INFO="\$(__git_ps1 '(%s)')"
+if [ -n "$GIT_INFO" ]; then
+    PS1+="\[$(reset)$(rgb_to_fg "$RGB_WDBG")$(rgb_to_bg "\$(git_status_color)")\]$TRIANGLE"
+    PS1+="\[$(reset)$(rgb_to_bg "\$(git_status_color)")\]$GIT_INFO"
+    PS1+="\[$(reset)$(rgb_to_fg "\$(git_status_color)")\]$TRIANGLE"
+else
+    PS1+="\[$(reset)$(rgb_to_fg "$RGB_WDBG")\]$TRIANGLE"
+fi
 PS1+="\[$(reset)\] "
 
 
