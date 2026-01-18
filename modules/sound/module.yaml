@@ -1,6 +1,6 @@
 description: sound
 dotfiles_sync: false
 dotfiles:
-  - source: wp-vol
-    target: ~/.local/bin/wp-vol
+  - source: wp-vol.sh
+    target: ~/.local/bin/wp-vol.sh
 

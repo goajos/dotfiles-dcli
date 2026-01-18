@@ -17,4 +17,4 @@ vim.lsp.enable("lua_ls")
 vim.lsp.enable("rust_analyzer")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("ty")
-vim.lsp.inlay_hint.enable(true) -- inlay parameter hints
+-- vim.lsp.inlay_hint.enable(true) -- inlay parameter hints
