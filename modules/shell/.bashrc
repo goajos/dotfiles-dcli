@@ -78,6 +78,23 @@ RGB_HOST=$(hex_to_rgb "#31748f")
 RGB_WDBG=$(hex_to_rgb "#e0def4")
 RGB_WDFG=$(hex_to_rgb "#191724")
 
+function git_prompt()
+{
+    # \001 = \[, \002 = \]
+    local ps1=""
+    local git_info="$(__git_ps1 '(%s)')"
+    if git rev-parse --is-inside-work-tree>/dev/null 2>&1; then
+        local status_color=$(git_status_color)
+        ps1+="\001$(reset)$(rgb_to_fg "$RGB_WDBG")$(rgb_to_bg "$status_color")\002$TRIANGLE"
+        ps1+="\001$(reset)$(rgb_to_bg "$status_color")\002$git_info"
+        ps1+="\001$(reset)$(rgb_to_fg "$status_color")\002$TRIANGLE"
+    else
+        ps1+="\001$(reset)$(rgb_to_fg "$RGB_WDBG")\002$TRIANGLE"
+    fi
+    # printf to emit control characters
+    printf "$ps1"
+}
+
 # PS1="\u@\h:\w \$(date +%d-%m-%y\ %T) \\$ "
 # each color printed section should be guarded with \[ \]
 PS1="\[$(rgb_to_bg "$RGB_USER")\]\u " # user
@@ -86,14 +103,7 @@ PS1+="\[$(reset)$(rgb_to_bg "$RGB_HOST")\]\h " # host
 PS1+="\[$(rgb_to_fg "$RGB_HOST")$(rgb_to_bg "$RGB_WDBG")\]$TRIANGLE"
 # \$(shorten_path) so that it gets dynamically updated
 PS1+="\[$(rgb_to_fg "$RGB_WDFG")\]\$(shorten_path) " # working directory
-GIT_INFO="\$(__git_ps1 '(%s)')"
-if [ -n "$GIT_INFO" ]; then
-    PS1+="\[$(reset)$(rgb_to_fg "$RGB_WDBG")$(rgb_to_bg "\$(git_status_color)")\]$TRIANGLE"
-    PS1+="\[$(reset)$(rgb_to_bg "\$(git_status_color)")\]$GIT_INFO"
-    PS1+="\[$(reset)$(rgb_to_fg "\$(git_status_color)")\]$TRIANGLE"
-else
-    PS1+="\[$(reset)$(rgb_to_fg "$RGB_WDBG")\]$TRIANGLE"
-fi
+PS1+="\$(git_prompt)"
 PS1+="\[$(reset)\] "
 
 
