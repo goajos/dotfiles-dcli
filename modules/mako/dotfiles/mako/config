@@ -12,7 +12,7 @@ progress-color=over #eb6f9280
 [urgency=high]
 default-timeout=0
 
-[app-name=wp-vol]
+[app-name=wp-vol.sh]
 layer=overlay
 history=0
 anchor=top-center
