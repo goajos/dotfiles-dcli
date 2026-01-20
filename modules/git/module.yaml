@@ -2,3 +2,5 @@ description: git
 dotfiles:
   - source: config
     target: ~/.ssh/config
+hook_behavior: ask
+post_install_hook: scripts/post-install-hook-git.sh

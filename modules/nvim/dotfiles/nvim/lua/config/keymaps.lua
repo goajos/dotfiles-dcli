@@ -22,7 +22,7 @@ vim.keymap.set("n", "<Leader>f", ":find ", { desc = "Built-in fuzzy finding file
 -- term
 vim.keymap.set("n", "<Leader>t", ":term<CR>", { desc = "Open terminal buffer" })
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Leave terminal buffer insert mode" })
-vim.keymap.set("t", "<Leader><Esc>", "<Esc>", { desc = "Send <Esc> to terminal buffer" })
+vim.keymap.set("t", "<C-v><Esc>", "<Esc>", { desc = "Send <Esc> to terminal buffer" })
 
 -- buffers
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
