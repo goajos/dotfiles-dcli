@@ -12,6 +12,9 @@ packages:
   - man-db # A utility for reading man pages
   - man-pages # Linux man pages
   - networkmanager # Network connection manager and user applications
+  # TODO: set up nvidia gpu drivers?
+  - nvidia-open # NVIDIA open kernel modules
+  - nvidia-utils # NVIDIA drivers utilities
 
   # Base util packages
   - openssh # SSH protocol implementation for remote login, command execution and file transfer

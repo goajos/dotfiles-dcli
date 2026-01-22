@@ -1831,5 +1831,33 @@
             },
             "Enabled": false
         }
+    },
+    "UserInterface": {
+        "RunZoneChecks": true,
+        "autoload_profiles": {
+            "exit_profile": {
+                "enabled": false,
+                "name": ""
+            },
+            "resume_profile": {
+                "enabled": false,
+                "name": ""
+            },
+            "suspend_profile": {
+                "enabled": false,
+                "name": ""
+            }
+        },
+        "geometry": {
+            "height": 0,
+            "load_geometry": false,
+            "save_on_exit": false,
+            "width": 0,
+            "x": 0,
+            "y": 0
+        },
+        "greyscale_tray_icon": false,
+        "language": "default",
+        "minimize_on_close": false
     }
 }
