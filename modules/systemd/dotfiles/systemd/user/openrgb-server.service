@@ -1,0 +1,8 @@
+[Unit]
+Description=OpenRGB server
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/openrgb --server

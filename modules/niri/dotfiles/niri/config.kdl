@@ -29,7 +29,7 @@ layout {
 
     tab-indicator {
         active-gradient from="#ebbcbaff" to="#31748fff" angle=90
-        position "bottom" 
+        position "bottom"
         length total-proportion=0.975
         place-within-column
     }
@@ -62,8 +62,7 @@ spawn-sh-at-startup "systemctl --user start swayidle.service"
 spawn-sh-at-startup "systemctl --user start idle-inhibitor.service"
 
 // openrgb profile
-spawn-sh-at-startup "systemctl --user start openrgb-gpu.service"
-spawn-sh-at-startup "systemctl --user start openrgb-mb.service"
+spawn-sh-at-startup "systemctl --user start openrgb-server.service"
 
 // bluetooth auto connect
 spawn-sh-at-startup "systemctl --user start bt-auto-connect.service"
