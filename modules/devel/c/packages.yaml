@@ -1,3 +1,4 @@
 description: c
 packages:
   - clang # C language family frontend for LLVM
+  - cmake # A cross-platform open-source make system

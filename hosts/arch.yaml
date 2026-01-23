@@ -7,6 +7,7 @@ enabled_modules:
   - base
   - bluetooth
   - devel/c
+  - devel/cuda
   - devel/csharp
   - devel/docker
   - devel/python

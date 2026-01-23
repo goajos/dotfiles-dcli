@@ -17,3 +17,8 @@ decorations_theme_variant = "Dark"
 
 [colors]
 transparent_background_colors = true
+
+[cursor]
+style.blinking = "On"
+blink_interval = 500
+blink_timeout = 0

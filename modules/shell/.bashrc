@@ -173,5 +173,7 @@ function yeet()
 
 # uv
 export PATH="/home/jappe/.local/bin:$PATH"
+# cuda
+export PATH="/opt/cuda/bin:$PATH"
 
 fastfetch

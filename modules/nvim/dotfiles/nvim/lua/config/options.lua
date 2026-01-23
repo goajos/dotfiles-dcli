@@ -1,3 +1,10 @@
+vim.opt.guicursor = "n-v-c-sm:block"
+-- vim.opt.guicursor:append("i-ci-ve:ver25")
+vim.opt.guicursor:append("r-cr-o:hor20")
+-- vim.opt.guicursor:append("t:block-blinkon500-blinkoff500-TermCursor")
+-- replace the thin line insert mode cursor with a blinking block
+vim.opt.guicursor:append("i-ci-ve-t:block-blinkwait0-blinkon500-blinkoff500-TermCursor")
+
 vim.opt.clipboard = "unnamedplus" -- use system clipboard
 
 vim.opt.ignorecase = true -- case-insensitive search
