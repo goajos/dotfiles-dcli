@@ -1,7 +1,4 @@
-# TODO: setup gaming module?
+# TODO: setup gaming module, e.g. decman/umu??
 description: gaming
 dotfiles_sync: false
-dotfiles:
-  - source: 
-    target:
 
