@@ -1,2 +1,6 @@
+# TODO: set up wsl module:
+# - git + config
+# - code + settings
+# - shell + .bashrc
 description: wsl
 dotfiles_sync: false

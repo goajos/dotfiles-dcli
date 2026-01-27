@@ -10,6 +10,7 @@ else
     require("config.usercmds")
 
     require("plugins.cmdline")
+    require("plugins.dap")
     require("plugins.lsp")
     require("plugins.lualine")
     require("plugins.treesitter")
