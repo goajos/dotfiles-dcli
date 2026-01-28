@@ -31,10 +31,3 @@ vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
     end
 })
 
--- -- remap esc for closing the fzf terminal buffer
--- vim.api.nvim_create_autocmd("FileType", {
---     pattern = "fzf",
---     callback = function()
---         vim.keymap.set("t", "<Esc>", "<Esc>")
---     end
--- })

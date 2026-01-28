@@ -20,6 +20,9 @@ vim.keymap.set("n", "<Leader>w", ":w<CR>", { desc = "Save current buffer" })
 vim.keymap.set("n", "<Leader>q", ":bd<CR>", { desc = "Close current buffer" })
 vim.keymap.set("n", "<Leader>f", ":find ", { desc = "Built-in fuzzy finding files" })
 
+-- ripgrep
+vim.keymap.set("n", "<Leader>g", ":grep ", { desc = "Ripgrep grep" })
+
 -- term
 vim.keymap.set("n", "<Leader>t", ":term<CR>", { desc = "Open terminal buffer" })
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Leave terminal buffer insert mode" })
@@ -29,6 +32,10 @@ vim.keymap.set("t", "<C-v><Esc>", "<Esc>", { desc = "Send <Esc> to terminal buff
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<Leader>b", ":buffer ", { desc = "Builtin fuzzy finding buffers" })
+
+-- netrw
+vim.keymap.set("n", "<Leader>e", ":25Lex<CR>", { desc = "Open left explorer in the working directory" })
+vim.keymap.set("n", "<Leader>cd", ":25Lex %:p:h<CR>", { desc = "Open left explorer in the current files directory" })
 
 -- dap
 local sidebar_is_open = false
