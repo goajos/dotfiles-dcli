@@ -32,6 +32,6 @@ local colors = {
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE", fg = colors.foreground })
 -- vim.api.nvim_set_hl(0, "EndOfbuffer", { bg = "NONE", fg = colors.foreground })
 
-vim.api.nvim_set_hl(0, "netrwDir",{ fg = colors.green })
-vim.api.nvim_set_hl(0, "netrwExe",{ fg = colors.red })
-vim.api.nvim_set_hl(0, "netrwSymlink",{ fg = colors.yellow })
+vim.api.nvim_set_hl(0, "netrwDir", { fg = colors.green })
+vim.api.nvim_set_hl(0, "netrwExe", { fg = colors.red })
+vim.api.nvim_set_hl(0, "netrwSymlink", { fg = colors.yellow })
