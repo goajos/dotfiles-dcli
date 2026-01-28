@@ -27,10 +27,10 @@ local colors = {
 }
 
 -- terminal background comes through
-vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", fg = colors.foreground })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE", fg = colors.foreground })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE", fg = colors.foreground })
-vim.api.nvim_set_hl(0, "EndOfbuffer", { bg = "NONE", fg = colors.foreground })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", fg = colors.foreground })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE", fg = colors.foreground })
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE", fg = colors.foreground })
+-- vim.api.nvim_set_hl(0, "EndOfbuffer", { bg = "NONE", fg = colors.foreground })
 
 vim.api.nvim_set_hl(0, "netrwDir",{ fg = colors.green })
 vim.api.nvim_set_hl(0, "netrwExe",{ fg = colors.red })

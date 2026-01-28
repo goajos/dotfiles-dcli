@@ -1,7 +1,13 @@
 vim.pack.add { "https://github.com/neovim/nvim-lspconfig" }
 
 vim.lsp.enable("clangd")
+vim.lsp.config("clangd", {
+    init_options = {
+        fallbackFlags = { "--std=c23" }
+    }
+})
 vim.lsp.enable("lua_ls")
+-- TODO: clean up and remove this roslyn dep?
 -- vim.lsp.config("roslyn_ls", {
 --     cmd = {
 --         "dotnet",
