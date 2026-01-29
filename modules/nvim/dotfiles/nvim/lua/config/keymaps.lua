@@ -1,3 +1,4 @@
+-- to test keybindings use <C-v> verbatim mode in insert mode!
 -- leader
 vim.keymap.set("n", "<Space>", "<Nop>", { desc = "Don't move cursor when using leader key" })
 vim.keymap.set({"n", "v"}, "<Leader>p", '"_dP', { desc = "Paste without overwriting the register", noremap = true, silent = true })
@@ -68,8 +69,8 @@ local toggle_dap_repl = function()
 end
 vim.keymap.set("n", "<Leader>r", toggle_dap_repl, { desc = "Toggle the dap repl" })
 vim.keymap.set("n", "<F5>", ":DapContinue<CR>", { desc = "Continue the dap debugger" })
-vim.keymap.set("n", "<S-F5>", ":DapTerminate<CR>", { desc = "Terminate the dap debugger" })
+vim.keymap.set("n", "<F17>", ":DapTerminate<CR>", { desc = "Terminate the dap debugger - F17 = <S-5>" })
 vim.keymap.set("n", "<F9>", ":DapToggleBreakpoint<CR>", { desc = "Toggle breakpoint on current line" })
 vim.keymap.set("n", "<F10>", ":DapStepOver<CR>", { desc = "Step over" })
 vim.keymap.set("n", "<F11>", ":DapStepInto<CR>", { desc = "Step into" })
-vim.keymap.set("n", "<S-F11>", ":DapStepOut<CR>", { desc = "Step out" })
+vim.keymap.set("n", "<F23>", ":DapStepOut<CR>", { desc = "Step out - F23 = <S-F11>" })
