@@ -19,10 +19,10 @@ vim.opt.expandtab = true -- use spaces for tabs
 vim.opt.autoindent = true -- copy indent form cursorline
 vim.opt.smartindent = true -- smart auto indenting
 
--- vim.opt.number = true -- show line numbers
--- vim.opt.relativenumber = true -- show relative line numbers
+vim.opt.number = true -- show line numbers
+vim.opt.relativenumber = true -- show relative line numbers
 -- vim.opt.cursorline = true -- highlight cursor line
--- vim.opt.signcolumn = "number" -- show sign column in the number column
+vim.opt.signcolumn = "number" -- show sign column in the number column
 vim.opt.termguicolors = true -- enable true colors
 vim.opt.colorcolumn = "100" -- show column line at 100 chars
 vim.opt.cmdheight = 1 -- linesize of the cmdline
@@ -46,7 +46,7 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr =  "v:lua.vim.treesitter.foldexpr()"
 -- vim.opt.foldexpr = "v:lua.vim.lsp.foldexpr()"
 vim.opt.foldlevel = 99
--- vim.opt.foldcolumn = "auto"
+vim.opt.foldcolumn = "auto"
 vim.opt.fillchars = [[fold: ,foldopen:▼,foldclose:▶,foldsep: ,foldinner: ]]
 
 vim.opt.winborder = 'rounded'
