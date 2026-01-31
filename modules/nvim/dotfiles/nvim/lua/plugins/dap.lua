@@ -14,7 +14,11 @@ dap.configurations.c = {
             return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
         end,
         cwd = "${workspaceFolder}",
-        args = {}
+        args = {
+            -- "init",
+            "sync",
+            -- "update",
+        }
     },
 }
 vim.api.nvim_set_hl(0, "DapBreakpointColor", { fg="#ff0000" })

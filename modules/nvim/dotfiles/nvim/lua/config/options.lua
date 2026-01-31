@@ -5,7 +5,7 @@ vim.opt.guicursor:append("r-cr-o:hor20")
 -- replace the thin line insert mode cursor with a blinking block
 vim.opt.guicursor:append("i-ci-ve-t:block-blinkwait0-blinkon500-blinkoff500-TermCursor")
 
-vim.opt.clipboard = "unnamedplus" -- use system clipboard
+-- vim.opt.clipboard = "unnamedplus" -- use system clipboard
 
 vim.opt.ignorecase = true -- case-insensitive search
 vim.opt.smartcase = true  -- case-sensitive if uppercase in search term

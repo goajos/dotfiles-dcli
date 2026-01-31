@@ -1,7 +1,11 @@
 -- to test keybindings use <C-v> verbatim mode in insert mode!
 -- leader
 vim.keymap.set("n", "<Space>", "<Nop>", { desc = "Don't move cursor when using leader key" })
-vim.keymap.set({"n", "v"}, "<Leader>p", '"_dP', { desc = "Paste without overwriting the register", noremap = true, silent = true })
+
+-- yank and paste
+-- vim.keymap.set({"n", "v"}, "<Leader>p", '"_dP', { desc = "Paste without overwriting the register" })
+vim.keymap.set({"n", "x"}, "gy", '"+y', { desc = "Copy to the system clipboard" })
+vim.keymap.set({"n", "x"}, "gp", '"+p', { desc = "Paste from the system clipboard" })
 
 -- search
 vim.keymap.set("n", "<Leader>/", ":noh<CR>", { desc = "Clear search highlighting" })
