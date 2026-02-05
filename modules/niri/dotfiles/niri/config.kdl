@@ -62,7 +62,7 @@ spawn-sh-at-startup "systemctl --user start swayidle.service"
 spawn-sh-at-startup "systemctl --user start idle-inhibitor.service"
 
 // openrgb profile
-spawn-sh-at-startup "systemctl --user start openrgb-server.service"
+spawn-sh-at-startup "systemctl --user start openrgb-profile.service"
 
 // bluetooth auto connect
 spawn-sh-at-startup "systemctl --user start bt-auto-connect.service"

@@ -1,9 +1,8 @@
 [Unit]
-Description=OpenRGB profile
-
-[Install]
-WantedBy=multi-user.target
+Description=openrgb
+BindsTo=niri.service
+After=niri.service
 
 [Service]
-ExecStart=/usr/bin/openrgb --profile "1s-breathing-mb"
-ExecStartPost=/usr/bin/openrgb --profile "1s-breathing-gpu"
+ExecStart=/usr/bin/openrgb --profile "direct-white-50"
+
